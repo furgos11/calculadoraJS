@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora industrial</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+    <h1>Calcula la cantidad de material que necesitarás para tu proyecto</h1>
+    <div id="form">
+        <label for="width">Ancho de la superficie en metros:</label><br>
+        <input type="number" id="width"><br><br>
+        <label for="height">Altura de la superficie en metros:</label><br>
+        <input type="number" id="height"><br><br>
+        <label for="option">Elegí el material que vas a utilizar ('pintura' o 'empapelado'):</label><br>
+        <input type="text" id="option"><br><br>
+        <label for="picker">Elegí un color para tu paleta: </label><br><br>
+        <input id="picker" type="color"><br><br>
+        <button onclick="calculateMaterial()">CALCULAR</button>
+    </div>
+    <div class="image-container" id="image-container">
+    </div>
+    <div>
+        <h2>Historial de colores</h2>
+        <input type="radio" id="ascendente" name="historial" checked onclick="historialActualizador()">Ascendente</input>
+        <input type="radio" id="descendente" name="historial" onclick="historialActualizador()">Descendente</input>
+        <div id="historial-container"></div>
+    </div>
+
+    <script src="prompt.js"></script>
+</body>
+</html>
